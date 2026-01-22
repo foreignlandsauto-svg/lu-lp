@@ -19,59 +19,48 @@
 <body>
 
     <!-- Header -->
-    <header class="header">
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <img src="assets/logo_le.png" alt="Luciana Espejo" class="logo-img">
-                <span class="logo-text">Dentista <strong>Figital</strong></span>
-            </a>
-            <nav class="nav">
-                <a href="#programa">O Programa</a>
-                <a href="#como-funciona">Como Funciona</a>
-                <a href="#sobre">Quem Sou</a>
-                <a href="#faq">FAQ</a>
-                <a href="#inscricao" class="btn-primary small">Inscrever-se</a>
-            </nav>
-            <div class="mobile-menu-icon">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </header>
+    <!-- Header Removed -->
 
     <!-- ========================================
          HERO SECTION - Primeira Dobra
          ======================================== -->
     <section class="hero">
-        <img src="assets/hero_banner_bg.png" alt="Teleodontologia - Liberdade Geográfica" class="hero-bg">
+        <img src="assets/bg_abstract.jpg" alt="Background com Opacidade" class="hero-bg">
         <div class="overlay"></div>
-        <div class="container hero-content">
-            <span class="event-badge">🎓 Evento Exclusivo • Vagas Limitadas</span>
-            
-            <p class="event-name">Programa Dentista Figital</p>
-            <h1>Teleodontologia na <span>Prática Clínica</span></h1>
-            
-            <p class="hero-promise">
-                Integre a Teleodontologia à sua prática clínica para atender melhor, ganhar escala e potencializar resultados com <strong>ética, método</strong> e sem virar refém do mocho ou de tecnologias caras e complexas.
-            </p>
-            
-            <div class="event-info">
-                <div class="event-info-item">
-                    <i class="far fa-calendar-alt"></i>
-                    <span>28 de Fevereiro de 2026</span>
+        <div class="container hero-container">
+            <div class="hero-text">
+                <span class="event-badge">🎓 Evento Exclusivo • Vagas Limitadas</span>
+                
+                <p class="event-name">Programa Dentista Figital</p>
+                <h1>Teleodontologia na <span>Prática Clínica</span></h1>
+                
+                <p class="hero-promise">
+                    Integre a Teleodontologia à sua prática clínica para atender melhor, ganhar escala e potencializar resultados com <strong>ética, método</strong> e sem virar refém do mocho.
+                </p>
+                
+                <div class="event-info">
+                    <div class="event-info-item">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>28/02/2026</span>
+                    </div>
+                    <div class="event-info-item">
+                        <i class="far fa-clock"></i>
+                        <span>9h às 17h</span>
+                    </div>
+                    <div class="event-info-item">
+                        <i class="fas fa-video"></i>
+                        <span>Online (Zoom)</span>
+                    </div>
                 </div>
-                <div class="event-info-item">
-                    <i class="far fa-clock"></i>
-                    <span>Das 9h às 17h</span>
-                </div>
-                <div class="event-info-item">
-                    <i class="fas fa-video"></i>
-                    <span>Online e Ao Vivo no Zoom</span>
+                
+                <div class="hero-cta">
+                    <a href="#inscricao" class="btn-yellow pulse">Quero ser um Dentista Figital</a>
+                    <p class="guarantee"><i class="fas fa-shield-alt"></i> Acesso 100% Garantido</p>
                 </div>
             </div>
-            
-            <div class="hero-cta">
-                <a href="#inscricao" class="btn-yellow pulse">Quero ser um Dentista Figital</a>
-                <p class="guarantee"><i class="fas fa-shield-alt"></i> 100% Online | Acesso Garantido | 7 dias de Garantia</p>
+
+            <div class="hero-image">
+                <img src="assets/luciana_photo.jpg" alt="Luciana Espejo" class="hero-person">
             </div>
         </div>
         
@@ -84,24 +73,39 @@
     <!-- ========================================
          STATS SECTION - Números de Impacto
          ======================================== -->
-    <section class="section stats-section">
+    <!-- ========================================
+         COUNTDOWN SECTION - Temporizador
+         ======================================== -->
+    <section class="countdown-section">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">24+</div>
-                    <div class="stat-label">Anos de Experiência</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">1.500+</div>
-                    <div class="stat-label">Dentistas Capacitados</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">8h</div>
-                    <div class="stat-label">Imersão Prática</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Online e Ao Vivo</div>
+            <div class="countdown-wrapper">
+                <div class="countdown-label">Tempo restante para o início:</div>
+                <div class="timer" id="countdown">
+                    <div class="timer-item">
+                        <div class="timer-val" id="days">00</div>
+                        <div class="timer-unit">Dias</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-val">:</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-val" id="hours">00</div>
+                        <div class="timer-unit">Hrs</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-val">:</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-val" id="minutes">00</div>
+                        <div class="timer-unit">Min</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-val">:</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-val" id="seconds">00</div>
+                        <div class="timer-unit">Seg</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,22 +122,30 @@
                     <h2>Dentista, você percebeu que <span>tudo mudou</span>?</h2>
                     <p>Especialmente depois da pandemia, as pessoas passaram a resolver quase tudo pelo celular, inclusive cuidar da saúde.</p>
                     
-                    <div class="problem-list">
-                        <div class="problem-item">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <span>Pacientes pedindo orientação por mensagem</span>
+                    <div class="problem-grid">
+                        <div class="problem-card">
+                            <div class="icon-box red">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <p>Pacientes pedindo orientação por mensagem</p>
                         </div>
-                        <div class="problem-item">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <span>Fotos enviadas fora do horário comercial</span>
+                        <div class="problem-card">
+                            <div class="icon-box red">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <p>Fotos enviadas fora do horário comercial</p>
                         </div>
-                        <div class="problem-item">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <span>Dúvidas no WhatsApp esperando resposta</span>
+                        <div class="problem-card">
+                            <div class="icon-box red">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <p>Dúvidas no WhatsApp esperando resposta</p>
                         </div>
-                        <div class="problem-item">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <span>Expectativa de atendimento imediato</span>
+                        <div class="problem-card">
+                            <div class="icon-box red">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <p>Expectativa de atendimento imediato</p>
                         </div>
                     </div>
                     
@@ -277,52 +289,75 @@
     <section class="section handson-section">
         <div class="container">
             <div class="handson-content">
-                <div class="handson-text">
-                    <span class="section-tag pink">Diferencial Exclusivo</span>
-                    <h2>Prática <span>Hands-On</span>: Seu Termo Personalizado</h2>
-                    <p>Este não é apenas um curso teórico. Durante a imersão, você vai construir junto comigo o documento mais importante para atuar legalmente com Teleodontologia:</p>
-                    
-                    <ul class="handson-list">
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Termo de Consentimento</strong> personalizado para sua realidade clínica</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Modelo editável</strong> que você poderá adaptar e usar imediatamente</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Orientação ao vivo</strong> para tirar dúvidas específicas do seu caso</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Respaldo jurídico</strong> para atuar com tranquilidade e segurança</span>
-                        </li>
-                    </ul>
-                    
-                    <div class="handson-guarantee">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Você sai da imersão com o documento pronto para usar na segunda-feira!</span>
+                <div class="handson-visual-col">
+                    <div class="document-preview">
+                        <div class="doc-header">
+                            <span class="doc-title">TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO</span>
+                            <span class="doc-subtitle">TELEODONTOLOGIA</span>
+                        </div>
+                        <div class="doc-body">
+                            <div class="doc-line"></div>
+                            <div class="doc-line"></div>
+                            <div class="doc-line short"></div>
+                            <br>
+                            <div class="doc-line"></div>
+                            <div class="doc-line"></div>
+                        </div>
+                        <div class="doc-seal">
+                            <i class="fas fa-check"></i>
+                            <span>VALIDADO</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="handson-visual">
-                    <div class="handson-card">
-                        <div class="handson-badge">
-                            <i class="fas fa-pen-fancy"></i>
+                <div class="handson-text-col">
+                    <span class="section-tag pink">Diferencial Exclusivo</span>
+                    <h2>Prática <span>Hands-On</span></h2>
+                    <p class="handson-lead">Você não vai apenas assistir. Você vai sair com seu documento pronto.</p>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-file-signature"></i>
+                            </div>
+                            <div class="benefit-info">
+                                <h4>Termo Próprio</h4>
+                                <p>Personalizado para sua clínica</p>
+                            </div>
                         </div>
-                        <div class="doc-icon">
-                            <i class="fas fa-file-signature"></i>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                            <div class="benefit-info">
+                                <h4>100% Editável</h4>
+                                <p>Adapte quando quiser</p>
+                            </div>
                         </div>
-                        <h3>Termo de Atendimento</h3>
-                        <p>Documento personalizado, validado e pronto para uso imediato na sua clínica.</p>
-                        <div class="doc-features">
-                            <span><i class="fas fa-check"></i> Editável</span>
-                            <span><i class="fas fa-check"></i> Validado</span>
-                            <span><i class="fas fa-check"></i> Atualizado</span>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="benefit-info">
+                                <h4>Blindagem Jurídica</h4>
+                                <p>Atue com segurança total</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div class="benefit-info">
+                                <h4>Orientação Ao Vivo</h4>
+                                <p>Tire dúvidas na hora</p>
+                            </div>
                         </div>
                     </div>
+                    
+                    <a href="#inscricao" class="btn-yellow mt-2">Quero meu Termo Validado</a>
                 </div>
             </div>
         </div>

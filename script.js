@@ -55,15 +55,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sticky Header Effect
     const header = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            header.style.background = 'rgba(255, 255, 255, 0.98)';
-        } else {
-            header.style.boxShadow = 'none';
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-        }
-    });
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.boxShadow = 'none';
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    }
 
     // FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
@@ -95,6 +97,38 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, observerOptions);
+
+    // Countdown Timer
+    const countdownDate = new Date('February 28, 2026 09:00:00').getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+
+        if (distance < 0) {
+            document.getElementById('countdown').innerHTML = '<div class="timer-val">EVENTO INICIADO</div>';
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const elDays = document.getElementById('days');
+        const elHours = document.getElementById('hours');
+        const elMinutes = document.getElementById('minutes');
+        const elSeconds = document.getElementById('seconds');
+
+        if(elDays) elDays.innerText = days < 10 ? '0' + days : days;
+        if(elHours) elHours.innerText = hours < 10 ? '0' + hours : hours;
+        if(elMinutes) elMinutes.innerText = minutes < 10 ? '0' + minutes : minutes;
+        if(elSeconds) elSeconds.innerText = seconds < 10 ? '0' + seconds : seconds;
+    }
+
+    // Update every second
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // Initial call
 
     // Observe all cards and feature items
     document.querySelectorAll('.question-card, .feature-item, .bonus-card, .stat-item').forEach(el => {
